@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  </head>
+<style>
+  .mytitle {
+    font-size: x-large;
+    font-style: bold;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .pinkblock {
+  display: block;
+  width:  100%;
+  height: 15%;
+  border: none;
+  padding-top: 12px ;
+  padding-left: 12px ;
+  margin-top: 25px;
+  font-size: 18px;
+  color:aliceblue;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  cursor: pointer;
+  text-align: left;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: rgb(226, 214, 124);
+}
+.img {
+    height: 50px;
+    width: 50px;
+  }
+</style>
+  <body>
+  <section class="section">
+    <div class="container"> <br><br>
+        <h1 class = 'mytitle'>5 random cows</h1>
+        <div class="pinkblock">
+        <img src="{{url_for('static', filename=photo_num[0])}}" height="250px" width="250px">
+        <p>{{results[0]}}</p>
+      </div>
+      <div class="pinkblock">
+        <img src="{{url_for('static', filename=photo_num[1])}}" height="250px" width="250px">
+      </div>
+      <div class="pinkblock">
+        <img src="{{url_for('static', filename=photo_num[2])}}" height="250px" width="250px">
+      </div>
+      <div class="pinkblock">
+        <img src="{{url_for('static', filename=photo_num[3])}}" height="250px" width="250px">
+      </div>
+      <div class="pinkblock">
+        <img src="{{url_for('static', filename=photo_num[4])}}" height="250px" width="250px">
+      </div>
+    </div>
+  </section>
+  </body>
+</html>
